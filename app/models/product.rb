@@ -7,4 +7,7 @@ class Product
   attr_accessible :name, :price, :released_on
 
   validates :name, presence: true
+
+  # has_many :reviews #in separate document
+  embeds_many :reviews #in parent's document
 end
