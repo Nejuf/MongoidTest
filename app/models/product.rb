@@ -1,5 +1,9 @@
 class Product
   include Mongoid::Document
+  include Mongoid::Timestamps #created_at, updated_at
+  include Mongoid::Paranoia #soft delete
+  include Mongoid::Versioning
+
   field :name, type: String
   field :price, type: BigDecimal
   field :released_on, type: Date
